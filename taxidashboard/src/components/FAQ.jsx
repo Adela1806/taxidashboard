@@ -29,9 +29,9 @@ export default function FAQ() {
         </div>
 
         <div className="faqs">
-            {faqs.map((faq) => {
+            {faqs.map((faq, index) => {
                 return (
-                    <div className="faq">
+                    <div className="faq" key={index}>
                         <div className="info">
                             {faq.icon}
                             <h4>{faq.text}</h4>
@@ -80,4 +80,9 @@ const Section = styled.section`
             }
     }
 }
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+    svg {
+      font-size: 2rem !important;
+    }
 `
